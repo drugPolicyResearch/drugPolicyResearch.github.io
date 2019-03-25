@@ -1,212 +1,142 @@
-skrollr.init({
-    forceHeight: false
-});
+;(function ($, portfolio, undefined) {
 
+	var heroSlider = function(){
+		var hero = $('.hero'),
+			slides = hero.children();
 
-
-/*!
- * Plugin for skrollr.
- * This plugin makes hashlinks scroll nicely to their target position.
- *
- * Alexander Prinzhorn - https://github.com/Prinzhorn/skrollr
- *
- * Free to use under terms of MIT license
- */
-(function(document, window) {
-	'use strict';
-
-	var DEFAULT_DURATION = 500;
-	var DEFAULT_EASING = 'sqrt';
-
-	var MENU_TOP_ATTR = 'data-menu-top';
-	var MENU_OFFSET_ATTR = 'data-menu-offset';
-
-	var skrollr = window.skrollr;
-	var history = window.history;
-	var supportsHistory = !!history.pushState;
-
-	/*
-		Since we are using event bubbling, the element that has been clicked
-		might not acutally be the link but a child.
-	*/
-	var findParentLink = function(element) {
-		//Yay, it's a link!
-		if(element.tagName === 'A') {
-			return element;
+		if (slides.length > 1) {
+			hero.slick({
+				adaptiveHeight: true,
+				autoplay: true,
+				autoplaySpeed: 6000,
+				arrows: false,
+				dots: true,
+				vertical: true,
+				verticalSwiping: true
+			});
 		}
-
-		//We reached the top, no link found.
-		if(element === document) {
-			return false;
-		}
-
-		//Maybe the parent is a link.
-		return findParentLink(element.parentNode);
 	};
 
-	/*
-		Handle the click event on the document.
-	*/
-	var handleClick = function(e) {
-		//Only handle left click.
-		if((e.which || e.button) !== 1) {
-			return;
+	var teamCarousel = function(){
+		var team = $('.team-members'),
+			members = team.children(),
+			wrap = team.parent();
+
+		if (members.length > 3) {
+			team.slick({
+				arrows: true,
+				dots: true,
+				infinite: true,
+				appendArrows: wrap,
+				appendDots: wrap,
+				slidesToShow: 3,
+				slidesToScroll: 3,
+				prevArrow: '<div class="slick-prev"><i class="fa fa-angle-left fa-5x" aria-hidden="true"></i></div>',
+				nextArrow: '<div class="slick-next"><i class="fa fa-angle-right fa-5x" aria-hidden="true"></i></div>',
+				responsive: [
+					{
+						breakpoint: 768,
+						settings: {
+							slidesToShow: 2,
+							slidesToScroll: 2
+						}
+					},
+					{
+						breakpoint: 600,
+						settings: {
+							slidesToShow: 1,
+							slidesToScroll: 1
+						}
+					}
+				]
+			});
 		}
+	};
 
-		var link = findParentLink(e.target);
+	var testimonialsCarousel = function(){
+		var testimonials = $('.testimonial-list'),
+			items = testimonials.children();
 
-		//The click did not happen inside a link.
-		if(!link) {
-			return;
+		if (items.length > 1) {
+			testimonials.slick({
+				arrows: false,
+				adaptiveHeight: true,
+				dots: true,
+				infinite: true
+			});
 		}
+	};
 
-		if(handleLink(link)) {
+	var projectSlideshow = function(){
+		var projectSlideshow = $('.project-slideshow'),
+			slides = projectSlideshow.children(),
+			arrowContainer = $('<div></div>', {'class': 'project-arrows'}).insertBefore(projectSlideshow),
+			wrap = projectSlideshow.parent();
+
+		if (slides.length > 1) {
+			projectSlideshow.slick({
+				arrows: true,
+				adaptiveHeight: true,
+				dots: true,
+				infinite: true,
+				appendArrows: arrowContainer,
+				appendDots: wrap,
+				prevArrow: '<button type="button" class="slick-prev">Prev</button>'
+			});
+		}
+	};
+
+	var animateScroll = function(){
+		var keepScroll = false;
+
+		$('a[href^="#"]').on('click', function(e){
 			e.preventDefault();
-		}
-	};
+			history.pushState({}, '', e.target.href);
+			$(window).trigger('hashchange');
+		});
 
-	/*
-		Handles the click on a link. May be called without an actual click event.
-		When the fake flag is set, the link won't change the url and the position won't be animated.
-	*/
-	var handleLink = function(link, fake) {
-		//Don't use the href property (link.href) because it contains the absolute url.
-		var href = link.getAttribute('href');
-
-		//Check if it's a hashlink.
-		if(!/^#/.test(href)) {
-			return false;
-		}
-
-		//Now get the targetTop to scroll to.
-		var targetTop;
-
-		//If there's a data-menu-top attribute, it overrides the actuall anchor offset.
-		var menuTop = link.getAttribute(MENU_TOP_ATTR);
-
-		if(menuTop !== null) {
-			targetTop = +menuTop;
-		} else {
-			var scrollTarget = document.getElementById(href.substr(1));
-
-			//Ignore the click if no target is found.
-			if(!scrollTarget) {
-				return false;
+		$(window).on('hashchange', function(e){
+			var hash = window.location.hash,
+				target = $(hash),
+				scrollTo = 0;
+			if (hash && target.length) {
+				scrollTo = target.offset().top;
 			}
-
-			targetTop = _skrollrInstance.relativeToAbsolute(scrollTarget, 'top', 'top');
-
-			var menuOffset = scrollTarget.getAttribute(MENU_OFFSET_ATTR);
-
-			if(menuOffset !== null) {
-				targetTop += +menuOffset;
-			}
-		}
-
-		if(supportsHistory && !fake) {
-			history.pushState({top: targetTop}, '', href);
-		}
-
-		//Now finally scroll there.
-		if(_animate && !fake) {
-			_skrollrInstance.animateTo(targetTop, {
-				duration: _duration(_skrollrInstance.getScrollTop(), targetTop),
-				easing: _easing
-			});
-		} else {
-			defer(function() {
-				_skrollrInstance.setScrollTop(targetTop);
-			});
-		}
-
-		return true;
+			$('html, body').animate({scrollTop: scrollTo}, 1000);
+		});
 	};
 
-	var defer = function(fn) {
-		window.setTimeout(fn, 1);
+	var instagramFeed = function(){
+
+		/* Paste your sample code here */
+
+		var feed = new Instafeed({
+			get: 'user',
+			useHttp: true,
+			limit: 5,
+			resolution: 'low_resolution',
+			userId: '',
+			clientId: '',
+			accessToken: ''
+		});
+
+		/* Stop pasting! No more changes after this point */
+
+		feed.run();
 	};
 
-	/*
-		Global menu function accessible through window.skrollr.menu.init.
-	*/
-	skrollr.menu = {};
-	skrollr.menu.init = function(skrollrInstance, options) {
-		_skrollrInstance = skrollrInstance;
-
-		options = options || {};
-
-		_easing = options.easing || DEFAULT_EASING;
-		_animate = options.animate !== false;
-		_duration = options.duration || DEFAULT_DURATION;
-
-		if(typeof _duration === 'number') {
-			_duration = (function(duration) {
-				return function() {
-					return duration;
-				};
-			}(_duration));
-		}
-
-		//Use event bubbling and attach a single listener to the document.
-		skrollr.addEvent(document, 'click', handleClick);
-
-		if(supportsHistory) {
-			window.addEventListener('popstate', function(e) {
-				var state = e.state || {};
-				var top = state.top || 0;
-
-				defer(function() {
-					_skrollrInstance.setScrollTop(top);
-				});
-			}, false);
-		}
+	portfolio.init = function() {
+		heroSlider();
+		teamCarousel();
+		testimonialsCarousel();
+		projectSlideshow();
+		animateScroll();
+		instagramFeed();
 	};
 
-	//Private reference to the initialized skrollr.
-	var _skrollrInstance;
+}(jQuery, window.portfolio = window.portfolio || {}));
 
-	var _easing;
-	var _duration;
-	var _animate;
 
-	//In case the page was opened with a hash, prevent jumping to it.
-	//http://stackoverflow.com/questions/3659072/jquery-disable-anchor-jump-when-loading-a-page
-	defer(function() {
-		if(window.location.hash) {
-			window.scrollTo(0, 0);
-
-			if(document.querySelector) {
-				var link = document.querySelector('a[href="' + window.location.hash + '"]');
-
-				if(link) {
-					handleLink(link, true);
-				}
-			}
-		}
-	});
-}(document, window));
-
-var s = skrollr.init(/*other stuff*/);
-
-//The options (second parameter) are all optional. The values shown are the default values.
-skrollr.menu.init(s, {
-    //skrollr will smoothly animate to the new position using `animateTo`.
-    animate: true,
-
-    //The easing function to use.
-    easing: 'sqrt',
-
-    //How long the animation should take in ms.
-    duration: function(currentTop, targetTop) {
-        //By default, the duration is hardcoded at 500ms.
-        return 1000;
-
-        //But you could calculate a value based on the current scroll position (`currentTop`) and the target scroll position (`targetTop`).
-        //return Math.abs(currentTop - targetTop) * 10;
-    },
-});
-
-$(".icon-bookmark").click(function(){
-    $("#placemark").addClass("placemarked");
-    $(".icon-bookmark").addClass("pressed");
+jQuery(function(){
+	portfolio.init();
 });
