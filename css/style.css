@@ -60,7 +60,7 @@ body {
 
 img {
   height: auto;
-  max-width: 100%; }
+  max-width: 70%; }
 
 a {
   color: #F3A358;
@@ -489,6 +489,7 @@ a {
     max-width: 812px; }
     @media (min-width: 768px) {
       .team .team-members {
+        padding-bottom: 3em;
         display: -webkit-flex;
         display: flex;
         -webkit-justify-content: space-between;
@@ -508,7 +509,7 @@ a {
       text-decoration: none; }
     .team .team-members h3 {
       color: black;
-      font-size: 2.5rem;
+      font-size: 2rem;
       font-weight: 700;
       text-decoration: none; }
       .team .team-members h3:after {
