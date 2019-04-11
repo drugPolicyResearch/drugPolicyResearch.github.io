@@ -287,6 +287,7 @@ a {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   color: black;
+  list-style-type: none;
   padding: 9.375rem 1rem 6.25rem;
   text-align: center; }
   .hero-slide h2 {
@@ -296,13 +297,51 @@ a {
       border-bottom: 2px solid black;
       content: '';
       display: block;
-      margin: 1.875rem auto;
+      margin: 1.25rem auto;
       width: 3.4375rem; }
-  .hero-slide p {
-    font-weight: 300;
+  .hero-slide h3 {
+    display: boxed;
+    font-weight: 500;
     font-size: 1.5rem;
     line-height: 1.5; }
+  .hero-slide p {
+    color: transparent;
+    font-weight: 300;
+    font-size: .2rem;
+    line-height: 1.5; }
   .hero-slide .cta {
+    margin-top: 5rem; }
+
+.hero-slide:hover {
+  background: #F8DB9A;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: black;
+  list-style-type: none;
+  padding: 9.375rem 1rem 6.25rem;
+  text-align: center; }
+  .hero-slide:hover h2 {
+    font-size: 3rem;
+    font-weight: 700; }
+    .hero-slide:hover h2:after {
+      border-bottom: 2px solid black;
+      content: '';
+      display: block;
+      margin: 1.25rem auto;
+      width: 3.4375rem; }
+  .hero-slide:hover p {
+    display: boxed;
+    color: white;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.5; }
+  .hero-slide:hover h3 {
+    display: none;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1.5; }
+  .hero-slide:hover .cta {
     margin-top: 5rem; }
 
 .hero-slide.style-1 {
