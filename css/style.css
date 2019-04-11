@@ -319,7 +319,7 @@ a {
   box-sizing: border-box;
   color: black;
   list-style-type: none;
-  padding: 9.375rem 1rem 6.25rem;
+  padding: 0.375rem 1rem 6.25rem;
   text-align: center; }
   .hero-slide:hover h2 {
     font-size: 3rem;
