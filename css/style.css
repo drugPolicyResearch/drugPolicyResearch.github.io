@@ -86,9 +86,10 @@ a {
 
 .section-subtitle {
   color: black;
-  font-size: 1.125rem;
+  font-size: 2rem;
   font-weight: 300;
-  margin-bottom: 5.625rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
   text-align: center; }
 
 .section {
@@ -704,6 +705,7 @@ a {
 /* Stats
 /* ------------------------------------------- */
 .stats {
+  background: thistle;
   border-bottom: 1px solid #d8d8d8;
   border-top: 1px solid #d8d8d8; }
 
