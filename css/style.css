@@ -288,7 +288,7 @@ a {
   box-sizing: border-box;
   color: black;
   list-style-type: none;
-  padding: 9.375rem 1rem 6.25rem;
+  padding: 4rem 1rem 5.25rem;
   text-align: center; }
   .hero-slide h2 {
     font-size: 3rem;
@@ -313,36 +313,16 @@ a {
     margin-top: 5rem; }
 
 .hero-slide:hover {
-  background: #F8DB9A;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  color: black;
-  list-style-type: none;
-  padding: 0.375rem 1rem 6.25rem;
-  text-align: center; }
-  .hero-slide:hover h2 {
-    font-size: 3rem;
-    font-weight: 700; }
-    .hero-slide:hover h2:after {
-      border-bottom: 2px solid black;
-      content: '';
-      display: block;
-      margin: 1.25rem auto;
-      width: 3.4375rem; }
+  padding: 4rem 1rem 5.25rem; }
   .hero-slide:hover p {
     display: boxed;
-    color: white;
-    font-weight: 300;
-    font-size: 1rem;
-    line-height: 1.5; }
+    font-size: .85rem;
+    color: white; }
   .hero-slide:hover h3 {
     display: none;
     font-weight: 500;
     font-size: 1.5rem;
     line-height: 1.5; }
-  .hero-slide:hover .cta {
-    margin-top: 5rem; }
 
 .hero-slide.style-1 {
   background: #F8DB9A;
@@ -361,9 +341,12 @@ a {
     border-bottom-color: white; }
 .hero-slide.style-4 {
   background: #37324A;
+  padding: 6rem 1rem 5.25rem; 
   color: white; }
   .hero-slide.style-4 h2:after {
     border-bottom-color: white; }
+  .hero-slide.style-4:hover {
+    padding: 1.5rem 1rem 5.25rem; }
 .hero-slide.style-5 {
   background: #329996;
   color: white; }
