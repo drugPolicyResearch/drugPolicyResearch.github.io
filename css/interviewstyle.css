@@ -218,13 +218,13 @@ hr {
     }
 
 .site-title {
-  font-size: 1.875rem;
+  font-size: 1.175rem;
   font-weight: 700; }
 
 .site-description {
   font-size: 0.875rem;
   font-weight: 200;
-  margin-top: 0.25rem; }
+  margin-top: 0rem; }
 
 .site-navigation {
   font-size: 1.125rem;
@@ -265,7 +265,7 @@ hr {
 .page-title {
   font-family: Montserrat, Helvetica, Arial, sans-serif;
   color: black;
-  font-size: 3.45rem;
+  font-size: 3.15rem;
   font-weight: 200;
   text-align: center; }
 
