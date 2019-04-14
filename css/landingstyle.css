@@ -31,8 +31,10 @@ body {
   margin-top: -20vh;
   font-size: 44px;
   text-align: center;
-  color: white;
-  background-color: black;
+  color: black;
+  background-color: antiquewhite;
+    font-weight: bold;
+
 }
 
 .exploreText:hover {
@@ -88,7 +90,7 @@ body {
 }
 
 .btn-group button {
-  margin-top: -5vh;
+  margin-top: -10vh;
   /*background-color: #4CAF50; /* Green background */*/
   /*border: 1px solid green; /* Green border */*/
   color: white; /* White text */

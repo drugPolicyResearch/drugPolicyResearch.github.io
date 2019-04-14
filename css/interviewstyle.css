@@ -43,8 +43,13 @@ hr {
 
 .explanationWrapper {
   cursor: pointer; /* Pointer/hand icon */
-  margin: 1%;
+  /*margin: 1%;*/
   height: 20vh;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 1%;
+  margin-bottom: 1%;
   background-color: white;
   justify-content: center;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -63,6 +68,9 @@ hr {
   display: none;
   background-color: white;
   overflow: hidden;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .explanationTextLeftContainer {
@@ -72,13 +80,14 @@ hr {
   grid-template-columns: 75% 25%;
   /* grid-column-gap: 4vw; */
   height: 100%;
+
 }
 
 .explanationTextRightContainer {
   display: grid;
   width: 100%;
   justify-content: center;
-  grid-template-columns: 10% 90%;
+  grid-template-columns: 13% 87%;
   /* grid-column-gap: 4vw; */
   height: 100%;
 }
