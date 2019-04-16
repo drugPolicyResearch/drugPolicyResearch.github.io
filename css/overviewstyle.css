@@ -311,3 +311,7 @@ ul.a {
   margin-left: 10%;
   margin-right: 10%;
 }
+
+.empty {
+  padding: 4rem;
+}
