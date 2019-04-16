@@ -4,6 +4,10 @@ body {
   width:100%;
 }
 
+ul.a {
+  list-style-type: circle;
+}
+
 
 .overviewcontent {
   /* height: 100vh; */
@@ -17,7 +21,7 @@ body {
   /* justify-content: center; */
   flex-direction: column;
   height: 100vh;
-  justify-content: center;
+  justify-content: right;
   font-family: Montserrat, Helvetica, Arial, sans-serif;
   font-size: 1.125rem;
   font-weight: 300; 
@@ -301,6 +305,7 @@ body {
 }
 
 .topic {
+  align-items: right;
   background-color: white;
   width: 80%;
   margin-left: 10%;
