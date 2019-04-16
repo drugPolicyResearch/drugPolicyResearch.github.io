@@ -1591,4 +1591,41 @@ h3 {
   transition: all 0.35s ease 0.15s;
 }
 
+.explore {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  flex-direction: column;
+  height: 100vh;
+  justify-content: right;
+  font-family: Montserrat, Helvetica, Arial, sans-serif;
+  font-size: 1.125rem;
+  font-weight: 300; 
+  /* color: white;
+  mix-blend-mode: difference; */
+  z-index: 10;
+}
+
+.exploreText {
+    /* font-family: Montserrat, Helvetica, Arial, sans-serif;
+    font-size: 30px; */
+    font-family: Montserrat, Helvetica, Arial, sans-serif;
+    font-size: 2rem;
+    font-weight: 300; 
+    text-align: left;
+  }
+
+.exploreText:hover {
+  /*background-color: white;
+  color: black;
+  transition: all 0.3s ease-in-out;*/
+}
+
+.exploreSubText {
+  font-family: Montserrat, Helvetica, Arial, sans-serif;
+  font-size: 1.125rem;
+  font-weight: 300;   /*margin-top: -15vh;*/
+  text-align: left;
+  /* font-size: 15px; */
+}
 
