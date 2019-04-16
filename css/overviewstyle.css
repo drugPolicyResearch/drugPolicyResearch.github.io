@@ -23,15 +23,19 @@ ul.a {
   height: 100vh;
   justify-content: right;
   font-family: Montserrat, Helvetica, Arial, sans-serif;
-
+  font-size: 1.125rem;
+  font-weight: 300; 
   /* color: white;
   mix-blend-mode: difference; */
   z-index: 10;
 }
 
 .exploreText {
+    /* font-family: Montserrat, Helvetica, Arial, sans-serif;
+    font-size: 30px; */
     font-family: Montserrat, Helvetica, Arial, sans-serif;
-    font-size: 30px;
+    font-size: 2rem;
+    font-weight: 300; 
     text-align: left;
   }
 
@@ -43,14 +47,15 @@ ul.a {
 
 .exploreSubText {
   font-family: Montserrat, Helvetica, Arial, sans-serif;
-  /*margin-top: -15vh;*/
+  font-size: 1.125rem;
+  font-weight: 300;   /*margin-top: -15vh;*/
   text-align: left;
-  font-size: 15px;
+  /* font-size: 15px; */
 }
 
 .arrowImg {
   position: relative;
-  z-index: -25
+  z-index: -25;
   height: 130px;
   width: 60px;
   left: -290px;
@@ -60,8 +65,9 @@ ul.a {
 .noteText {
   position: relative;
   color: white;
-  font-size: 15px;  
-}
+  font-family: Montserrat, Helvetica, Arial, sans-serif;
+  font-size: 1.125rem;
+  font-weight: 300; }
 
 .thanksText {
   position: absolute;
@@ -88,14 +94,15 @@ ul.a {
 
 .btn-group button {
   margin-top: -5vh;
-  /*background-color: #4CAF50; /* Green background */*/
-  /*border: 1px solid green; /* Green border */*/
+  /*background-color: #4CAF50; /* Green background */
+  /*border: 1px solid green; /* Green border */
   color: white; /* White text */
   padding: 10px 24px; /* Some padding */
   cursor: pointer; /* Pointer/hand icon */
   float: left; /* Float the buttons side by side */
   font-family: Montserrat, Helvetica, Arial, sans-serif;
-
+  font-size: 1.125rem;
+  font-weight: 300; 
   color: white;
   background-color: transparent;
   border-bottom-color: transparent;
@@ -145,13 +152,14 @@ ul.a {
 }
 
 .text-group p {
-  /*background-color: #4CAF50; /* Green background */*/
-  /*border: 1px solid green; /* Green border */*/
+  /*background-color: #4CAF50; /* Green background */
+  /*border: 1px solid green; /* Green border */
   color: white; /* White text */
   padding: 10px 24px; /* Some padding */
   float: left; /* Float the buttons side by side */
   font-family: Montserrat, Helvetica, Arial, sans-serif;
-
+  font-size: 1.125rem;
+  font-weight: 300; 
   color: white;
   background-color: transparent;
   border-bottom-color: transparent;
