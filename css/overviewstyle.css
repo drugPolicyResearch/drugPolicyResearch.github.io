@@ -315,3 +315,35 @@ ul.a {
 .empty {
   padding: 4rem;
 }
+
+
+.site-header-main {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 1150px;
+  padding: 3.75rem 0.625rem; }
+  @media (min-width: 768px) {
+    .site-header-main {
+      -webkit-align-items: center;
+      align-items: center;
+      -webkit-flex-direction: row;
+      flex-direction: row;
+      -webkit-justify-content: space-between;
+      justify-content: space-between; } }
+
+
+.site-title {
+  font-size: 1.75rem;
+  font-weight: 700; }
+
+  .site-description {
+    font-size: 0.875rem;
+    font-weight: 200;
+    margin-top: 0.25rem; 
+  }
