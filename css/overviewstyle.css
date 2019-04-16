@@ -4,6 +4,14 @@ body {
   width:100%;
 }
 
+h1 {
+  padding:0;
+  margin:0;
+  border: 0;
+  vertical-align: baseline; 
+
+}
+
 ul.a {
   list-style-type: circle;
 }
@@ -340,10 +348,16 @@ ul.a {
 
 .site-title {
   font-size: 1.75rem;
-  font-weight: 700; }
+  font-weight: 700; 
+}
 
   .site-description {
     font-size: 0.875rem;
     font-weight: 200;
     margin-top: 0.25rem; 
   }
+
+  .section-aboutus {
+    padding-bottom: 8rem; 
+  }
+  
