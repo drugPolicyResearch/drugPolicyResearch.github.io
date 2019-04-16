@@ -1,10 +1,3 @@
-/* ------------------------------------------- */
-/* Reset CSS - don't edit anything in this section
-/* ------------------------------------------- */
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -93,7 +86,16 @@ a {
   text-align: center; }
 
 .section {
-  padding: 5.625rem 1rem; }
+  padding: 5.625rem 1rem; 
+}
+
+.section-aboutus {
+  padding-bottom: 8rem; 
+}
+
+.empty {
+  padding: 4rem;
+}
 
 /* ------------------------------------------- */
 /* Text content
@@ -172,7 +174,6 @@ a {
 /* Site Header
 /* ------------------------------------------- */
 .site-header-main {
-  background: antiquewhite;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -350,7 +351,7 @@ a {
   .hero-slide.style-4:hover {
     padding: 1.5rem 1rem 5.25rem; }
 .hero-slide.style-5 {
-  background: #329996;
+  background: #434444;
   color: white; }
   .hero-slide.style-5 h2:after {
     border-bottom-color: white; }
@@ -653,8 +654,6 @@ a {
 /* Page Content
 /* ------------------------------------------- */
 .page {
-  background: pink;
-  background-size: contain;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -679,19 +678,23 @@ a {
     @media (min-width: 768px) {
       .page-content .graphic {
         padding-bottom: 0;
-        width: 48.69565%; } }
+        width: 48.69565%; 
+      } 
+    }
     .page-content .graphic figcaption {
       color: black;
       font-size: 2.5rem;
       font-weight: 700;
-      margin: 0 4rem; }
+      margin: 0 4rem; 
+    }
       .page-content .graphic figcaption:before {
         border-bottom: 2px solid black;
         content: '';
         display: block;
         margin-bottom: 2rem;
         margin-top: 3rem;
-        width: 3.4375rem; }
+        width: 3.4375rem; 
+      }
   .page-content .text {
     padding-bottom: 3rem; }
     @media (min-width: 768px) {
@@ -1216,7 +1219,6 @@ a {
 .graphic {
   margin-top: 3vh;
   height: 53vh;
-  border: 1px solid black;
   display: flex; /* get rid of the flex stuff later */
   justify-content: center;
   align-items: center;
