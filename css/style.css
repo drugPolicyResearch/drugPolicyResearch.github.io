@@ -49,7 +49,8 @@ body {
   color: #656565;
   font-family: Montserrat, Helvetica, Arial, sans-serif;
   font-size: 1.125rem;
-  font-weight: 300; }
+  font-weight: 300; 
+}
 
 img {
   height: auto;
@@ -711,10 +712,11 @@ a {
 /* ------------------------------------------- */
 /* Stats
 /* ------------------------------------------- */
-.stats {
-  background: thistle;
+/* .stats {
+  background: white;
   border-bottom: 1px solid #d8d8d8;
-  border-top: 1px solid #d8d8d8; }
+  border-top: 1px solid #d8d8d8; 
+} */
 
 .stats-listing {
   color: black;
