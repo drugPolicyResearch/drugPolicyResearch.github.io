@@ -86,7 +86,16 @@ a {
   text-align: center; }
 
 .section {
-  padding: 5.625rem 1rem; }
+  padding: 5.625rem 1rem; 
+}
+
+.section-aboutus {
+  padding-bottom: 8rem; 
+}
+
+.empty {
+  padding: 4rem;
+}
 
 /* ------------------------------------------- */
 /* Text content
@@ -669,19 +678,23 @@ a {
     @media (min-width: 768px) {
       .page-content .graphic {
         padding-bottom: 0;
-        width: 48.69565%; } }
+        width: 48.69565%; 
+      } 
+    }
     .page-content .graphic figcaption {
       color: black;
       font-size: 2.5rem;
       font-weight: 700;
-      margin: 0 4rem; }
+      margin: 0 4rem; 
+    }
       .page-content .graphic figcaption:before {
         border-bottom: 2px solid black;
         content: '';
         display: block;
         margin-bottom: 2rem;
         margin-top: 3rem;
-        width: 3.4375rem; }
+        width: 3.4375rem; 
+      }
   .page-content .text {
     padding-bottom: 3rem; }
     @media (min-width: 768px) {
@@ -1206,7 +1219,6 @@ a {
 .graphic {
   margin-top: 3vh;
   height: 53vh;
-  border: 1px solid black;
   display: flex; /* get rid of the flex stuff later */
   justify-content: center;
   align-items: center;
