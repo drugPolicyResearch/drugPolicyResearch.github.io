@@ -71,6 +71,14 @@ a {
     -webkit-column-count: 2;
     column-count: 2; }
 
+    .section-title-research {
+      color: black;
+      font-size: 3.75rem;
+      font-weight: 200;
+      margin-bottom: 1.625rem;
+      text-align: center; 
+    }
+
 .section-title,
 .page-title {
   color: black;
@@ -1512,7 +1520,7 @@ h3 {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: vertical; 
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -1528,21 +1536,21 @@ h3 {
 .accordion a:hover,
 .accordion a:hover::after {
   cursor: pointer;
-  color: #03b5d2;
+  color: #434444;
 }
 
 .accordion a:hover::after {
-  border: 1px solid #03b5d2;
+  border: 1px solid #434444;
 }
 
 .accordion a.active {
-  color: #03b5d2;
-  border-bottom: 1px solid #03b5d2;
+  color: #434444;
+  border-bottom: 1px solid #434444;
 }
 
 .accordion a::after {
   font-family: 'Ionicons';
-  content: '\f218';
+  /* content: '\f218'; */
   position: absolute;
   float: right;
   right: 1rem;
@@ -1560,9 +1568,9 @@ h3 {
 
 .accordion a.active::after {
   font-family: 'Ionicons';
-  content: '\f209';
-  color: #03b5d2;
-  border: 1px solid #03b5d2;
+  /* content: '\f209'; */
+  color: #434444;
+  border: 1px solid #434444;
 }
 
 .accordion .content {
